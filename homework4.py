@@ -12,6 +12,6 @@ mutable_list = [1, 2, "hard", True]
 print(type(mutable_list))
 print(mutable_list)
 mutable_list[2] = "easy"
-mutable_list.remove(int("1"))
+mutable_list.remove(1)
 mutable_list.append("Modified")
 print(mutable_list)
