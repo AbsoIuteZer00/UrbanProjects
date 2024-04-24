@@ -8,4 +8,4 @@ house = House()
 for i in range(house.numberOfFloors):
     """цикл для перебора этажей"""
     i += 1
-    print(f'Я нахожусь на {i} этаже')
+    print(f'Текущий этаж равен {i}')
