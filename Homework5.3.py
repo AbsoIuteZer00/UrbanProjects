@@ -1,4 +1,5 @@
 class Building:
+    """Здание"""
     total = 0
 
     def __init__(self):
@@ -8,4 +9,4 @@ class Building:
 building_size = 40
 while Building.total < building_size:
     building = Building()
-    print(Building.total)
+    print(f'Здание №{Building.total}')
