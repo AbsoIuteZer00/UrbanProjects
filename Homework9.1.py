@@ -1,3 +1,6 @@
+print(f'Задача №1: Фабрика функций')
+
+
 def function_(operation):
     if operation == "sum_":
         def sum_(a, b):
@@ -14,7 +17,8 @@ def function_(operation):
 my_function = function_("sum_")
 print(my_function(10, 5))
 
-multiply = lambda x, y: x ** y
+print(f'Задача №2: Лямбда')
+multiply = (lambda x, y: x ** y)
 print(multiply(2, 5))
 
 
@@ -25,13 +29,17 @@ def multiply_def(x, y):
 print(multiply_def(2, 5))
 
 
-class Repeater:
-    def __init__(self, value):
-        self.value = value
-
-    def __call__(self, n):
-        return [self.value] * n
+print(f'Задача №3: Вызываемые объекты')
 
 
-repeat_num = Repeater(10)
-print(repeat_num(5))
+class Square:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __call__(self):
+        return self.x * self.y
+
+
+square_num = Square(5, 3)
+print(square_num.__call__())
