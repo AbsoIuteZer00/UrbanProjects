@@ -16,6 +16,8 @@ def function_(operation):
 
 my_function = function_("sum_")
 print(my_function(10, 5))
+my_function = function_("difference")
+print(my_function(15, 3))
 
 print(f'Задача №2: Лямбда')
 multiply = (lambda x, y: x ** y)
@@ -38,8 +40,10 @@ class Square:
         self.y = y
 
     def __call__(self):
-        return self.x * self.y
+        print(f'Сторона x: {self.x}, Сторона y: {self.y}')
+        area = self.x * self.y
+        print(f'Площадь: {area}')
 
 
 square_num = Square(5, 3)
-print(square_num.__call__())
+print(square_num())
