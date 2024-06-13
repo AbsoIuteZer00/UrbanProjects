@@ -11,8 +11,10 @@ def stream(*args):
         print(f'{result}')
 
 
-thread = Thread(target=stream, args=list(numbers))
-thread.start()
+thread1 = Thread(target=stream, args=list(numbers))
+thread2 = Thread(target=stream, args=list(letter))
+thread1.start()
 time.sleep(0.5)
-stream(*letter)
-thread.join()
+thread2.start()
+thread1.join()
+thread2.join()
